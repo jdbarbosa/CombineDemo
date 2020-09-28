@@ -21,6 +21,7 @@ final class MovieListViewController: UIViewController, ViewModelBindable {
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.placeholder = "Search Movies"
+        searchBar.showsCancelButton = true
         searchBar.delegate = self
         return searchBar
     }()
@@ -127,6 +128,7 @@ extension MovieListViewController: UISearchBarDelegate {
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
         self.mostPopular.send(())
     }
 }

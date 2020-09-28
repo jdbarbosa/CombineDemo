@@ -15,8 +15,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o87-CA-djJ">
-                                <rect key="frame" x="161" y="442.5" width="92" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gkG-Ts-eVp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="403"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o87-CA-djJ" userLabel="Movie title">
+                                <rect key="frame" x="20" y="457" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykq-hF-dvW" userLabel="Movie subtitle">
+                                <rect key="frame" x="20" y="488" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6l5-2g-4zc">
+                                <rect key="frame" x="186" y="442.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ux1-gW-AaN" userLabel="Movie description">
+                                <rect key="frame" x="20" y="519" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -27,16 +48,34 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6l5-2g-4zc" firstAttribute="centerX" secondItem="ks0-Xw-L4m" secondAttribute="centerX" id="0n9-4d-JcK"/>
                             <constraint firstItem="bd7-Ek-Vdf" firstAttribute="centerY" secondItem="ks0-Xw-L4m" secondAttribute="centerY" id="6OF-R9-ecG"/>
-                            <constraint firstItem="o87-CA-djJ" firstAttribute="centerX" secondItem="ks0-Xw-L4m" secondAttribute="centerX" id="Jel-Oh-aq9"/>
+                            <constraint firstItem="ux1-gW-AaN" firstAttribute="leading" secondItem="o87-CA-djJ" secondAttribute="leading" id="Azc-Oi-sCk"/>
+                            <constraint firstItem="ykq-hF-dvW" firstAttribute="leading" secondItem="o87-CA-djJ" secondAttribute="leading" id="JdS-ga-wLR"/>
+                            <constraint firstItem="gkG-Ts-eVp" firstAttribute="leading" secondItem="ks0-Xw-L4m" secondAttribute="leading" id="KFF-VN-m5j"/>
+                            <constraint firstItem="o87-CA-djJ" firstAttribute="top" secondItem="gkG-Ts-eVp" secondAttribute="bottom" constant="10" id="LdQ-u9-84F"/>
+                            <constraint firstItem="gkG-Ts-eVp" firstAttribute="top" secondItem="ks0-Xw-L4m" secondAttribute="top" id="NJ4-Yb-6aA"/>
+                            <constraint firstItem="6l5-2g-4zc" firstAttribute="centerY" secondItem="ks0-Xw-L4m" secondAttribute="centerY" id="W9u-nU-aM5"/>
+                            <constraint firstItem="ux1-gW-AaN" firstAttribute="trailing" secondItem="o87-CA-djJ" secondAttribute="trailing" id="ap6-lW-KT1"/>
                             <constraint firstItem="bd7-Ek-Vdf" firstAttribute="centerX" secondItem="ks0-Xw-L4m" secondAttribute="centerX" id="dQU-sT-uZC"/>
-                            <constraint firstItem="o87-CA-djJ" firstAttribute="centerY" secondItem="ks0-Xw-L4m" secondAttribute="centerY" id="t9f-rV-CfX"/>
+                            <constraint firstItem="ux1-gW-AaN" firstAttribute="top" secondItem="ykq-hF-dvW" secondAttribute="bottom" constant="10" id="dxj-Ox-C1j"/>
+                            <constraint firstItem="ks0-Xw-L4m" firstAttribute="trailing" secondItem="gkG-Ts-eVp" secondAttribute="trailing" id="jv2-lc-lhA"/>
+                            <constraint firstItem="o87-CA-djJ" firstAttribute="leading" secondItem="ks0-Xw-L4m" secondAttribute="leading" constant="20" id="jwC-er-CD4"/>
+                            <constraint firstItem="ks0-Xw-L4m" firstAttribute="trailing" secondItem="o87-CA-djJ" secondAttribute="trailing" constant="20" id="u2c-AI-Hng"/>
+                            <constraint firstItem="gkG-Ts-eVp" firstAttribute="height" secondItem="9uU-vk-C3N" secondAttribute="height" multiplier="0.45" id="uP2-AS-cXM"/>
+                            <constraint firstItem="ykq-hF-dvW" firstAttribute="trailing" secondItem="o87-CA-djJ" secondAttribute="trailing" id="wgr-6T-7y5"/>
+                            <constraint firstItem="ks0-Xw-L4m" firstAttribute="bottom" secondItem="ux1-gW-AaN" secondAttribute="bottom" priority="200" constant="20" id="z6A-cj-aFB"/>
+                            <constraint firstItem="ykq-hF-dvW" firstAttribute="top" secondItem="o87-CA-djJ" secondAttribute="bottom" constant="10" id="zaW-wF-QbL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ks0-Xw-L4m"/>
                     </view>
                     <connections>
-                        <outlet property="errorLabel" destination="o87-CA-djJ" id="DTq-iS-ULS"/>
+                        <outlet property="descriptionLabel" destination="ux1-gW-AaN" id="mBr-q5-V4Q"/>
+                        <outlet property="errorLabel" destination="6l5-2g-4zc" id="ICg-6R-QSC"/>
                         <outlet property="loadingIndicator" destination="bd7-Ek-Vdf" id="yig-mz-ohN"/>
+                        <outlet property="posterImageView" destination="gkG-Ts-eVp" id="VJK-YR-4UM"/>
+                        <outlet property="subtitleLabel" destination="ykq-hF-dvW" id="cDg-y0-SmZ"/>
+                        <outlet property="titleLabel" destination="o87-CA-djJ" id="0cU-r2-brx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLY-fX-0yC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -25,6 +25,12 @@ final class MovieCell: UITableViewCell {
         movieImageView.af.cancelImageRequest()
     }
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        movieTitleLabel.font = UIFont(fontStyle: .futuraBold, fontSize: .regular)
+        movieGenreLabel.font = UIFont(fontStyle: .proximaNovaRegular, fontSize: .reading)
+    }
+
 
     func setup(for movie: MovieViewData) {
 

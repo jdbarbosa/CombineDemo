@@ -29,6 +29,15 @@ struct MovieViewData {
         self.poster = poster
         self.rating = rating
     }
+
+    static func mapMovieToMovieViewData(movie: Movie) -> MovieViewData {
+        return MovieViewData(id: movie.id,
+                             title: movie.title,
+                             subtitle: movie.subtitle,
+                             overview: movie.overview,
+                             poster: movie.poster_path,
+                             rating: String(format: "%.2f", movie.vote_average))
+    }
 }
 
 extension MovieViewData: Hashable {

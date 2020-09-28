@@ -20,6 +20,9 @@
 		DF7BD404251E2F280090FD4A /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7BD403251E2F280090FD4A /* MovieDetailViewController.swift */; };
 		DF7BD406251E2F370090FD4A /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7BD405251E2F370090FD4A /* MovieDetailViewModel.swift */; };
 		DF7BD408251E2F4A0090FD4A /* MovieDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7BD407251E2F4A0090FD4A /* MovieDetailRouter.swift */; };
+		DF7BD40C25224DB00090FD4A /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7BD40B25224DB00090FD4A /* FontStyle.swift */; };
+		DF7BD41125224F070090FD4A /* proxima_nova_regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF7BD40F25224F060090FD4A /* proxima_nova_regular.otf */; };
+		DF7BD41225224F070090FD4A /* futura_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DF7BD41025224F060090FD4A /* futura_bold.otf */; };
 		DFD767A62518EEDF00C9BD34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD767A52518EEDF00C9BD34 /* AppDelegate.swift */; };
 		DFD767A82518EEDF00C9BD34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD767A72518EEDF00C9BD34 /* SceneDelegate.swift */; };
 		DFD767AF2518EEE200C9BD34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD767AE2518EEE200C9BD34 /* Assets.xcassets */; };
@@ -35,9 +38,7 @@
 		DFD767CF251B916C00C9BD34 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD767CE251B916C00C9BD34 /* APIClient.swift */; };
 		DFD767D1251B917600C9BD34 /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD767D0251B917600C9BD34 /* APIResource.swift */; };
 		DFD767D3251B919600C9BD34 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD767D2251B919600C9BD34 /* APIError.swift */; };
-		DFD767D6251B927800C9BD34 /* ReqresAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD767D5251B927800C9BD34 /* ReqresAPI.swift */; };
 		DFD767DA251B92B000C9BD34 /* MovieListScene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD767D9251B92B000C9BD34 /* MovieListScene.storyboard */; };
-		DFD767DC251BB24700C9BD34 /* UserListResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD767DB251BB24700C9BD34 /* UserListResource.swift */; };
 		DFD767DE251BBB2A00C9BD34 /* MovieListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD767DD251BBB2A00C9BD34 /* MovieListRouter.swift */; };
 		DFD767E0251BBB6300C9BD34 /* RouterBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD767DF251BBB6300C9BD34 /* RouterBindable.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,9 @@
 		DF7BD403251E2F280090FD4A /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		DF7BD405251E2F370090FD4A /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		DF7BD407251E2F4A0090FD4A /* MovieDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRouter.swift; sourceTree = "<group>"; };
+		DF7BD40B25224DB00090FD4A /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
+		DF7BD40F25224F060090FD4A /* proxima_nova_regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = proxima_nova_regular.otf; sourceTree = "<group>"; };
+		DF7BD41025224F060090FD4A /* futura_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = futura_bold.otf; sourceTree = "<group>"; };
 		DFD767A22518EEDF00C9BD34 /* CombineDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD767A52518EEDF00C9BD34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFD767A72518EEDF00C9BD34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,9 +78,7 @@
 		DFD767CE251B916C00C9BD34 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		DFD767D0251B917600C9BD34 /* APIResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResource.swift; sourceTree = "<group>"; };
 		DFD767D2251B919600C9BD34 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		DFD767D5251B927800C9BD34 /* ReqresAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReqresAPI.swift; sourceTree = "<group>"; };
 		DFD767D9251B92B000C9BD34 /* MovieListScene.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieListScene.storyboard; sourceTree = "<group>"; };
-		DFD767DB251BB24700C9BD34 /* UserListResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListResource.swift; sourceTree = "<group>"; };
 		DFD767DD251BBB2A00C9BD34 /* MovieListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRouter.swift; sourceTree = "<group>"; };
 		DFD767DF251BBB6300C9BD34 /* RouterBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterBindable.swift; sourceTree = "<group>"; };
 		F42C3FDE44CC844C7BBEDEA9 /* Pods-CombineDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CombineDemo.debug.xcconfig"; path = "Target Support Files/Pods-CombineDemo/Pods-CombineDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +136,41 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		DF7BD40925224AF00090FD4A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DF7BD3F4251D03420090FD4A /* MovieCell.xib */,
+				DF7BD3F6251D035B0090FD4A /* MovieCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DF7BD40A25224D980090FD4A /* Resource Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DF7BD40B25224DB00090FD4A /* FontStyle.swift */,
+			);
+			path = "Resource Utils";
+			sourceTree = "<group>";
+		};
+		DF7BD40D25224E5A0090FD4A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF7BD40E25224ED50090FD4A /* Fonts */,
+				DFD767AE2518EEE200C9BD34 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DF7BD40E25224ED50090FD4A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DF7BD41025224F060090FD4A /* futura_bold.otf */,
+				DF7BD40F25224F060090FD4A /* proxima_nova_regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		DFD767992518EEDF00C9BD34 = {
 			isa = PBXGroup;
 			children = (
@@ -155,18 +192,16 @@
 		DFD767A42518EEDF00C9BD34 /* CombineDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DF7BD40D25224E5A0090FD4A /* Resources */,
+				DF7BD40A25224D980090FD4A /* Resource Utils */,
 				DFD767CD251B915C00C9BD34 /* API */,
 				DFD767CC251B904100C9BD34 /* SceneFactory */,
-				DFD767CB251B8FFE00C9BD34 /* Routing */,
 				DFD767C9251B8FD600C9BD34 /* Scenes */,
 				DFD767A52518EEDF00C9BD34 /* AppDelegate.swift */,
 				DFD767A72518EEDF00C9BD34 /* SceneDelegate.swift */,
-				DFD767AE2518EEE200C9BD34 /* Assets.xcassets */,
 				DFD767B02518EEE200C9BD34 /* LaunchScreen.storyboard */,
 				DFD767B32518EEE200C9BD34 /* Info.plist */,
-				DFD767BB251A495900C9BD34 /* ViewModelBindable.swift */,
 				DFD767BF251A49AC00C9BD34 /* AppContext.swift */,
-				DFD767DF251BBB6300C9BD34 /* RouterBindable.swift */,
 			);
 			path = CombineDemo;
 			sourceTree = "<group>";
@@ -183,12 +218,11 @@
 		DFD767CA251B8FE300C9BD34 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				DF7BD40925224AF00090FD4A /* Cell */,
 				DFD767D9251B92B000C9BD34 /* MovieListScene.storyboard */,
 				DFD767C1251A69E800C9BD34 /* MovieListViewController.swift */,
 				DFD767C3251A6A4800C9BD34 /* MovieListViewModel.swift */,
 				DFD767DD251BBB2A00C9BD34 /* MovieListRouter.swift */,
-				DF7BD3F4251D03420090FD4A /* MovieCell.xib */,
-				DF7BD3F6251D035B0090FD4A /* MovieCell.swift */,
 				DF7BD3F8251D04EB0090FD4A /* MovieViewData.swift */,
 			);
 			path = List;
@@ -197,6 +231,7 @@
 		DFD767CB251B8FFE00C9BD34 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
+				DFD767DF251BBB6300C9BD34 /* RouterBindable.swift */,
 				DFD767C5251B53DA00C9BD34 /* SceneRouter.swift */,
 				DFD767C7251B556800C9BD34 /* AppRouter.swift */,
 			);
@@ -206,6 +241,8 @@
 		DFD767CC251B904100C9BD34 /* SceneFactory */ = {
 			isa = PBXGroup;
 			children = (
+				DFD767CB251B8FFE00C9BD34 /* Routing */,
+				DFD767BB251A495900C9BD34 /* ViewModelBindable.swift */,
 				DFD767B9251A493A00C9BD34 /* SceneFactory.swift */,
 				DFD767BD251A497E00C9BD34 /* Scene.swift */,
 			);
@@ -216,37 +253,11 @@
 			isa = PBXGroup;
 			children = (
 				DF7BD3ED251CFEF70090FD4A /* Movies */,
-				DFD767D4251B922C00C9BD34 /* Reqres */,
 				DFD767CE251B916C00C9BD34 /* APIClient.swift */,
 				DFD767D0251B917600C9BD34 /* APIResource.swift */,
 				DFD767D2251B919600C9BD34 /* APIError.swift */,
 			);
 			path = API;
-			sourceTree = "<group>";
-		};
-		DFD767D4251B922C00C9BD34 /* Reqres */ = {
-			isa = PBXGroup;
-			children = (
-				DFD767D8251B929200C9BD34 /* Detail */,
-				DFD767D7251B928900C9BD34 /* List */,
-				DFD767D5251B927800C9BD34 /* ReqresAPI.swift */,
-			);
-			path = Reqres;
-			sourceTree = "<group>";
-		};
-		DFD767D7251B928900C9BD34 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				DFD767DB251BB24700C9BD34 /* UserListResource.swift */,
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
-		DFD767D8251B929200C9BD34 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,8 +321,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFD767DA251B92B000C9BD34 /* MovieListScene.storyboard in Resources */,
+				DF7BD41125224F070090FD4A /* proxima_nova_regular.otf in Resources */,
 				DF7BD402251E2F060090FD4A /* MovieDetailScene.storyboard in Resources */,
 				DFD767B22518EEE200C9BD34 /* LaunchScreen.storyboard in Resources */,
+				DF7BD41225224F070090FD4A /* futura_bold.otf in Resources */,
 				DF7BD3F5251D03420090FD4A /* MovieCell.xib in Resources */,
 				DFD767AF2518EEE200C9BD34 /* Assets.xcassets in Resources */,
 			);
@@ -369,15 +382,14 @@
 				DF7BD3FD251E21D60090FD4A /* SearchResource.swift in Sources */,
 				DFD767A62518EEDF00C9BD34 /* AppDelegate.swift in Sources */,
 				DFD767BE251A497E00C9BD34 /* Scene.swift in Sources */,
-				DFD767DC251BB24700C9BD34 /* UserListResource.swift in Sources */,
 				DFD767C0251A49AC00C9BD34 /* AppContext.swift in Sources */,
-				DFD767D6251B927800C9BD34 /* ReqresAPI.swift in Sources */,
 				DF7BD3F9251D04EC0090FD4A /* MovieViewData.swift in Sources */,
 				DFD767DE251BBB2A00C9BD34 /* MovieListRouter.swift in Sources */,
 				DF7BD3EF251CFF0F0090FD4A /* MostPopularResource.swift in Sources */,
 				DFD767C4251A6A4800C9BD34 /* MovieListViewModel.swift in Sources */,
 				DFD767A82518EEDF00C9BD34 /* SceneDelegate.swift in Sources */,
 				DFD767CF251B916C00C9BD34 /* APIClient.swift in Sources */,
+				DF7BD40C25224DB00090FD4A /* FontStyle.swift in Sources */,
 				DFD767BA251A493A00C9BD34 /* SceneFactory.swift in Sources */,
 				DFD767E0251BBB6300C9BD34 /* RouterBindable.swift in Sources */,
 				DF7BD3F3251D021D0090FD4A /* MovieModel.swift in Sources */,

@@ -16,14 +16,14 @@ struct MovieDetailViewModel: RouterBindable {
 
     enum State {
         case loading
-        case results(Movie)
+        case results(MovieViewData)
         case error(APIError)
     }
 
     func transform(loadMovie: AnyPublisher<Int, APIError>) -> AnyPublisher<State, APIError> {
         let resultsPublisher = loadMovie.flatMap({ self.moviesAPI.sendAlamofireRequest(for: MovieDetailsResource(movieId: $0)) })
             .map { result -> State in
-                return .results(result)
+                return .results(MovieViewData.mapMovieToMovieViewData(movie: result))
         }.eraseToAnyPublisher()
 
         let loadingPublisher = loadMovie.map{ _ in State.loading }.eraseToAnyPublisher()

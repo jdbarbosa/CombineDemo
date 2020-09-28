@@ -42,7 +42,7 @@ final class MovieListViewModel: RouterBindable {
 
         let popularMovies = input.popularMovies.flatMap({ self.moviesAPI.sendAlamofireRequest(for: MostPopularResource()) })
             .map( { result -> State in
-                return .results(result.results.map { self.mapMovieToMovieViewData(movie: $0)})
+                return .results(result.results.map { MovieViewData.mapMovieToMovieViewData(movie: $0)})
             }).eraseToAnyPublisher()
 
         let searchLoading = input.search.map { _ in State.loading }
@@ -54,7 +54,7 @@ final class MovieListViewModel: RouterBindable {
             .filter({ !$0.isEmpty })
             .flatMap({ self.moviesAPI.sendAlamofireRequest(for: SearchResource(query: $0)) })
             .map( { result -> State in
-                return .results(result.results.map { self.mapMovieToMovieViewData(movie: $0)})
+                return .results(result.results.map { MovieViewData.mapMovieToMovieViewData(movie: $0)})
             }).eraseToAnyPublisher()
 
         let loadingPublishers = Publishers.Merge(popularLoading, searchLoading).removeDuplicates().eraseToAnyPublisher()
@@ -64,15 +64,6 @@ final class MovieListViewModel: RouterBindable {
 
     private func moveToMovieDetail(movieId: Int) {
         self.router.moveToMovieDetail(movieId: movieId)
-    }
-
-    private func mapMovieToMovieViewData(movie: Movie) -> MovieViewData {
-        return MovieViewData(id: movie.id,
-                             title: movie.title,
-                             subtitle: movie.subtitle,
-                             overview: movie.overview,
-                             poster: movie.poster_path,
-                             rating: String(format: "%.2f", movie.vote_average))
     }
 
 }
