@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie List View Controller-->
+        <scene sceneID="Epc-jm-5Ta">
+            <objects>
+                <viewController storyboardIdentifier="MovieListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="As8-um-5SG" customClass="MovieListViewController" customModule="CombineDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Izn-b6-0L3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Scene" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfb-YH-mjd" userLabel="Error label">
+                                <rect key="frame" x="158" y="442.5" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="I27-Bl-evb">
+                                <rect key="frame" x="197" y="443" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sRx-Uv-BCd">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Kfb-YH-mjd" firstAttribute="centerY" secondItem="l1Y-wp-82D" secondAttribute="centerY" id="2Nz-CO-CpK"/>
+                            <constraint firstItem="l1Y-wp-82D" firstAttribute="trailing" secondItem="sRx-Uv-BCd" secondAttribute="trailing" id="56a-bC-B3T"/>
+                            <constraint firstItem="sRx-Uv-BCd" firstAttribute="top" secondItem="l1Y-wp-82D" secondAttribute="top" id="96Z-lU-W2a"/>
+                            <constraint firstItem="I27-Bl-evb" firstAttribute="centerY" secondItem="l1Y-wp-82D" secondAttribute="centerY" id="HKW-fw-esT"/>
+                            <constraint firstItem="sRx-Uv-BCd" firstAttribute="leading" secondItem="l1Y-wp-82D" secondAttribute="leading" id="Y8U-IB-51T"/>
+                            <constraint firstItem="Kfb-YH-mjd" firstAttribute="centerX" secondItem="l1Y-wp-82D" secondAttribute="centerX" id="a6I-2f-70b"/>
+                            <constraint firstItem="I27-Bl-evb" firstAttribute="centerX" secondItem="l1Y-wp-82D" secondAttribute="centerX" id="je7-eT-Ovv"/>
+                            <constraint firstItem="l1Y-wp-82D" firstAttribute="bottom" secondItem="sRx-Uv-BCd" secondAttribute="bottom" id="q1W-17-cDy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="l1Y-wp-82D"/>
+                    </view>
+                    <connections>
+                        <outlet property="errorLabel" destination="Kfb-YH-mjd" id="E8r-8C-mgO"/>
+                        <outlet property="loadingIndicator" destination="I27-Bl-evb" id="F5j-ZF-PvP"/>
+                        <outlet property="tableView" destination="sRx-Uv-BCd" id="1Y4-zS-oJf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dMp-XP-kXp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="78"/>
+        </scene>
+    </scenes>
+</document>
