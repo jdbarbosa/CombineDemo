@@ -8,19 +8,19 @@
 
 import UIKit
 
-protocol Scene {
-    func make(factory: SceneFactory, context: AppContext) -> UIViewController
-}
-
+/// A Scene is defined by having a View Controller, a view model and a router to handle its transitions.
 /// Implementing this protocol gives you the ability to unpack a view controller the storyboard and have a
 /// view model instance attached to them. All you have to implement is `viewModel` and the rest has a default
 /// implementation.
-protocol ViewModelScene: Scene {
+protocol Scene {
     associatedtype ViewControllerType where ViewControllerType: UIViewController, ViewControllerType: ViewModelBindable, ViewControllerType.ViewModelType: RouterBindable
 
     typealias ViewModelType = ViewControllerType.ViewModelType
     typealias RouterType = ViewModelType.RouterType
-    typealias ViewModelFactory = (SceneFactory, AppContext) -> ViewModelType
+
+    typealias RouterFactory = (SceneFactory, AppContext) -> RouterType
+    typealias ViewModelFactory = (RouterType, AppContext) -> ViewModelType
+
 
     /// Implement this to use a custom storyboard to load the scene. Default is to find a storyboard with this type's name.
     var storyboardName: String { get }
@@ -29,9 +29,11 @@ protocol ViewModelScene: Scene {
 
     var viewModel: ViewModelFactory { get }
 
+    var router: RouterFactory { get }
+
 }
 
-extension ViewModelScene {
+extension Scene {
 
     /// ViewModelScene scenes can override this to provide their own storyboards from the resource bundle
     var storyboardName: String { return String(describing: type(of: self)) }
@@ -42,56 +44,39 @@ extension ViewModelScene {
     }
 
     /// Get the storyboard identifier from the given type - the default behaviour is just to use the class name.
-    private var viewControllerIdentifier: String {
+    var viewControllerIdentifier: String {
         return String(describing: ViewControllerType.self)
     }
 
 }
 
-extension ViewModelScene {
-
-    /// Default method to create a UIViewController, if further configuration is needed, this can be overriden on the respective ViewModelScene implementation
-    func make(factory: SceneFactory, context: AppContext) -> UIViewController {
-        return self.createViewController(factory: factory, context: context)
-    }
-
-    private func createViewController(factory: SceneFactory, context: AppContext) -> ViewControllerType {
-        return self.createViewModelBindalbleController(for: self.viewModel(factory, context),
-                                         identifier: self.viewControllerIdentifier)
-    }
-
-    private func createViewModelBindalbleController<T>(for viewModel: T.ViewModelType, identifier: String) -> T where T: UIViewController, T: ViewModelBindable {
-
-        let viewController = self.storyboard.instantiateViewController(withIdentifier: identifier)
-        guard var viewModelBindableController = viewController as? T else {
-            fatalError("Instantiated view controller of invalid type, expceted \(T.self), found \(type(of: viewController))")
-        }
-        viewModelBindableController.viewModel = viewModel
-        return viewModelBindableController
-
-    }
-}
-
-struct MovieListScene: ViewModelScene {
+struct MovieListScene: Scene {
 
     typealias ViewControllerType = MovieListViewController
 
-    var viewModel: ViewModelFactory = { factory, context in
-        MovieListViewModel(router: MovieListRouter(appRouter: context.appRouter, sceneFactory: factory),
+    var router: RouterFactory = { factory, context in
+        MovieListRouter(appRouter: context.appRouter, sceneFactory: factory)
+    }
+
+    var viewModel: ViewModelFactory = { router, context in
+        MovieListViewModel(router: router,
                            moviesAPI: context.moviesAPI)
     }
 }
 
-struct MovieDetailScene: ViewModelScene {
+struct MovieDetailScene: Scene {
 
     typealias ViewControllerType = MovieDetailViewController
 
     var viewModel: ViewModelFactory
 
+    var router: RouterFactory = { factory, context in
+        MovieDetailRouter(appRouter: context.appRouter, sceneFactory: factory)
+    }
+
     init(movieId: Int) {
-        self.viewModel = { factory, context in
-            MovieDetailViewModel(router: MovieDetailRouter(appRouter: context.appRouter,
-                                                           sceneFactory: factory),
+        self.viewModel = { router, context in
+            MovieDetailViewModel(router: router,
                                  moviesAPI: context.moviesAPI,
                                  movieId: movieId)
         }
