@@ -23,10 +23,12 @@ final class CombineDemoSceneFactory: SceneFactory {
         self.context = context
     }
 
+    /// Return a UIViewController for the Scene
     func create<T>(_ scene: T) -> UIViewController where T : Scene {
         return self.buildViewController(for: scene)
     }
 
+    /// Return the typed ViewController
     private func buildViewController<T: Scene>(for scene: T) -> T.ViewControllerType {
         return self.buildViewModelBindalbleController(for: self.buildViewModel(for: scene),
                                                        with: scene.viewControllerIdentifier,

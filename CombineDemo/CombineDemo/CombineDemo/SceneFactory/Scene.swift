@@ -17,7 +17,6 @@ protocol Scene {
 
     typealias ViewModelType = ViewControllerType.ViewModelType
     typealias RouterType = ViewModelType.RouterType
-
     typealias RouterFactory = (SceneFactory, AppContext) -> RouterType
     typealias ViewModelFactory = (RouterType, AppContext) -> ViewModelType
 
