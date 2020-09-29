@@ -10,7 +10,7 @@ import UIKit
 
 /// A Scene is defined by having a View Controller, a view model and a router to handle its transitions.
 /// Implementing this protocol gives you the ability to unpack a view controller the storyboard and have a
-/// view model instance attached to them. All you have to implement is `viewModel` and the rest has a default
+/// view model instance attached to them. All you have to implement is `viewModel` and `router` and the rest has a default
 /// implementation.
 protocol Scene {
     associatedtype ViewControllerType where ViewControllerType: UIViewController, ViewControllerType: ViewModelBindable, ViewControllerType.ViewModelType: RouterBindable
@@ -26,6 +26,7 @@ protocol Scene {
 
     var storyboard: UIStoryboard { get }
 
+    /// Both the viewModel and the router need to be explicitly implemented by the scene.
     var viewModel: ViewModelFactory { get }
 
     var router: RouterFactory { get }
