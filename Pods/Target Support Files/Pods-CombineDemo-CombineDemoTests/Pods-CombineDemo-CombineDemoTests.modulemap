@@ -1,0 +1,6 @@
+framework module Pods_CombineDemo_CombineDemoTests {
+  umbrella header "Pods-CombineDemo-CombineDemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
